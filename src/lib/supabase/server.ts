@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { type SupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 
-export default async function createClient(): Promise<SupabaseClient> {
+export async function createClient(): Promise<SupabaseClient> {
   if (
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
     !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
